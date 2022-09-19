@@ -1,0 +1,1 @@
+from deepCNNClassifier.components.data_ingestion import DataIngestion
