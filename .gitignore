@@ -134,3 +134,5 @@ dmypy.json
 *.jpg
 *.zip
 *.h5
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2022-10-05-07-39-02/train/events.out.tfevents.1664935746.PAVILIONGAMING.11880.0.v2
+artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2022-10-05-07-39-02/validation/events.out.tfevents.1664937405.PAVILIONGAMING.11880.1.v2
