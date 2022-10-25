@@ -23,10 +23,10 @@ stages:
 
 
   training:
-    cmd: python src/deepCNNClassifier/pipeline/stage_03_training.py
+    cmd: python src/deepCNNClassifier/pipeline/stage_04_training.py
     deps:
-      - src/deepCNNClassifier/pipeline/stage_03_training.py
-      - src/deepCNNClassifier/components/prepare_callback.py
+      - src/deepCNNClassifier/pipeline/stage_04_training.py
+      - src/deepCNNClassifier/components/prepare_callbacks.py
       - configs/config.yaml
       - artifacts/data_ingestion/PetImages
       - artifacts/prepare_base_model
