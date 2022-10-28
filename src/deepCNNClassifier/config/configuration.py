@@ -1,6 +1,6 @@
 from deepCNNClassifier.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
-from deepCNNClassifier.utils import read_yaml, create_directories
-from deepCNNClassifier.entity import DataIngestionConfig, PrepareBaseModelConfig, PrepareCallbacksConfig, TrainingConfig
+from deepCNNClassifier.utils import read_yaml, create_directories, save_json
+from deepCNNClassifier.entity import DataIngestionConfig, PrepareBaseModelConfig, PrepareCallbacksConfig, TrainingConfig, EvaluationConfig
 from pathlib import Path
 import os
 
@@ -84,3 +84,12 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/model.h5",
+            training_data="artifacts/data_ingestion/PetImages",
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
